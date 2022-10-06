@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            <h1>all visitors</h1>
+        </title>
+    </head>
+    <body>
+    {%for i in v%}
+    <h3>username:{{i.username}}</h3>
+    <h3>email:{{i.email}}</h3>
+    {% endfor %}
+    </body>
+</html>

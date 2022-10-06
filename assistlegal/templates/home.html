@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        *{
+    margin: 10;
+    padding: 10;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+  
+/* navbar */
+  
+.navbar-nav{
+    margin-right: 0 !important;
+    padding-right: 100px;
+}
+  
+.navbar{
+    background-color: #0a193d;
+    color: white !important;
+}
+  
+.nav-item a{
+    color: white !important;
+}
+  
+.nav-item{
+    padding-left: 2px;
+}
+  
+.navbar-brand{
+    color: white !important;
+    padding-left: 100px;
+}
+  
+#navbar button{
+    color: white !important;
+}
+  
+/* banner */
+  
+#banner-container{
+    background-color: #0a193d;
+    color: white !important;
+    padding-top: 80px;
+    padding-bottom: 80px;
+      
+}
+  
+#banner-row img{
+    max-width: 70%;
+    height: auto;
+    display: block;
+    padding-left: 30px;
+}
+  
+#banner-row h3, p{
+    padding-left: 20px;
+    padding-top: 20px;
+    text-align: center;
+}
+  
+#banner-row a{
+    background-color: white !important;
+    color: black !important;
+    border: none;
+    margin-left: 20px;
+    margin-top: 20px;
+      
+}
+#banner-col{
+    padding-left: 20px;
+}
+/* service */
+#service{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+  
+#service h1{
+    padding-bottom: 70px;
+}
+  
+/* about */
+  
+#about{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+  
+#about h1{
+    padding-bottom: 70px;
+}
+  
+#about-col ul{
+    padding-top: 50px;
+    padding-left: 50px;
+}
+  
+#about-col ul li{
+    padding-top: 15px;
+      
+}
+  
+/* product */
+  
+#product{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+  
+#product h1{
+    padding-bottom: 70px;
+}
+  
+#product-col2 ul{
+    padding-top: 90px;
+}
+  
+#product-col2 ul li{
+    padding-top: 15px;
+}
+  
+/* social */
+  
+#social{
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+  
+#social h1{
+    padding-bottom: 70px;
+}
+  
+.social-col a:hover img{
+   transform: translateY(-10px);
+}
+  
+#social-row{
+    flex-direction: row;
+}
+  
+/* footer */
+  
+.mb-3{
+  padding-top: 10px;
+}
+  
+  
+/* media */
+@media only screen and (max-width: 987px){
+    .navbar-brand{
+        padding-left: 0px;
+    }
+}
+  
+@media only screen and (max-width: 768px){
+    #banner-row img{
+        padding-top: 20px;
+    }
+  
+   .social-col{
+       width: 33%;
+   }
+  
+}
+    </style>
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport"
+		content="width=device-width,
+				initial-scale=1" />
+
+	<!-- Bootstrap CSS -->
+	<link
+	href=
+	"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity=
+"sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+	crossorigin="anonymous"
+	/>
+<!--	<link rel="stylesheet"-->
+<!--		href="style.css" />-->
+	<link rel="preconnect"
+		href="https://fonts.gstatic.com" />
+	<link
+	href=
+"https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap"
+	rel="stylesheet"/>
+	<title>Legalassist</title>
+	{% load static %}
+</head>
+<body>
+	<section id="navbar">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			Legal Assist
+			</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent"
+			aria-expanded="false"
+			aria-label="Toggle navigation"
+		>
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse"
+			id="navbarSupportedContent">
+			<ul class="navbar-nav m-auto">
+			<li class="nav-item">
+				<a class="nav-link active"
+				aria-current="page"
+				href="#">Home</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"
+				href="/Service">Services</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"
+				href="#about">About Us</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"
+				href="#product">Products</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link"
+				href="#social">Contact Us</a>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link"
+				href="{% url 'signin'%}">Sign in</a>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link"
+				href="{% url 'signup'%}">Sign up</a>
+			</li>
+            <li class="nav-item">
+				<a class="nav-link"
+				href='location'>Location</a>
+			</li>
+
+
+			</ul>
+		</div>
+		</div>
+	</nav>
+	</section>
+
+	<!-- banner -->
+	<section id="banner">
+	<div class="container-fluid" id="banner-container">
+		<div class="row" id="banner-row">
+		<div class="col-md-6" id="banner-col">
+			<h3>
+			BEST PROFESSIONAL WEBSITE INDIAN LEGAL ASSISTANCE
+			</h3>
+			
+<p>
+			The fastest way to rectify your legal issues
+			
+			</p>
+
+			<div class="d-grid gap-2 d-md-flex justify-content-center">
+			<a class="btn btn-primary"
+				href="contactus"
+				role="button">Contact Us</a>
+			</div>
+		</div>
+		<div class="col-md-6" id="banner-col2">
+			<img
+			class="img-responsive rounded mx-auto d-block"
+			src="https://thumbs.dreamstime.com/b/legal-services-concept-gavel-word-legal-services-sound-block-legal-services-101424374.jpg"
+			alt=""
+			/>
+		</div>
+		</div>
+	</div>
+	</section>
+
+	<!-- services -->
+	<section id="/service">
+	<h1 class="text-center">SERVICES</h1>
+	<div class="container-fluid" id="service-container">
+		<div class="row" id="banner-row">
+		<div class="col-md-4" id="service-col1">
+			<img
+			src="http://defendmidemocracy.com/wp-content/uploads/2016/04/lawyer-03.jpg"
+			class="img-fluid rounded mx-auto d-block"
+			alt="..."
+			/>
+			<h3>Family Law</h3>
+			
+<p>
+			A Complete solution on family laws in India. Marriage, divorce, adoption, custody etc
+			Dowry Laws, Professional Advice on Family law Hindu marriage act
+			Muslim Law
+			Latest updates on Family Law
+			</p>
+
+		</div>
+		<div class="col-md-4" id="service-col2">
+			<img
+			src="https://media.istockphoto.com/photos/attorney-picture-id1158703224?k=20&m=1158703224&s=612x612&w=0&h=IU2G0qE_yvbmUTidUp0iYDeaZWhX-e_JuK3HENfIDwk="
+			class="img-fluid rounded mx-auto d-block"
+			alt="..."
+			/>
+			<h3>Civil Law</h3>
+			
+<p>
+			1.Help to file a case as per CPC<br />
+			2. guide-how to institute a suit<br />
+			3. Injunction<br />
+			4. Summons<br />
+			5.Production of documents
+			</p>
+
+		</div>
+		<div class="col-md-4" id="service-col3">
+			<img
+			src="data:image/jpeg;base64,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"
+			class="img-fluid rounded mx-auto d-block"
+			alt="..."
+			/>
+			<h3>Constitutional Law</h3>
+			
+<p>
+			Report on Constitutional Law of India
+			Review on the constitutions of America, Russia etc
+			</p>
+
+		</div>
+		</div>
+	</div>
+	</section>
+	<hr />
+
+	<!-- about Us -->
+	<section id="about">
+	<h1 class="text-center">About Us</h1>
+	<div class="container-fluid" id="about-container">
+		<div class="row" id="banner-row">
+		<div class="col-md-6" id="about-col">
+			<h3>Why Us</h3>
+			<ul>
+				<li>Family Law</li>
+				<li>Civil laws</li>
+				<li>Consumer laws</li>
+				<li>Constitutional laws</li>
+				<li>Womens Protection</li>
+				<li>Supreme Court Judgments</li>
+				<li>Election laws</li>
+				<li>Environmental laws</li>
+				<li>Human Rights</li>
+			</li>
+			<li>LAW COLLEGE DETAILS
+				(CAMPUS PRO)</li>
+			<li>
+				Let us take care of your Business needs.
+				Customer Productivity is our Priority.
+			</li>
+			<li>Our expertise in Business includes</li>
+			</ul>
+		</div>
+		<div class="col-md-6" id="banner-col2">
+			<img
+			class="img-responsive rounded mx-auto d-block"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxhS9F0axxdRngoRLJyBv_sNbnor_ea7yRIJ9c7pV-8eMy89Lx81ESzsCSLSUws1K0FxI&usqp=CAU"
+			alt=""
+			/>
+		</div>
+		</div>
+	</div>
+	</section>
+	<hr />
+	<!-- product -->
+
+	<section id="product">
+	<h1 class="text-center">Our Products</h1>
+	<div class="container-fluid" id="product-container">
+		<div class="row" id="banner-row">
+		<div class="col-md-6" id="about-col">
+			<img
+			class="img-responsive rounded mx-auto d-block"
+			src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlsejrJQB5duq82xgtNmjDUgBeg00Savuifg&usqp=CAU"
+			alt=""
+			/>
+		</div>
+		<div class="col-md-6" id="product-col2">
+			<h3>Product List</h3>
+
+			<ul>
+			<li>Family court case filing</li>
+			<li>OP filing
+				case move to Supreme court</li>
+			<li>Civil Case handling</li>
+			<li>E-Legal Services</li>
+			</ul>
+		</div>
+		</div>
+	</div>
+	</section>
+	<hr />
+	<!-- social -->
+	<section id="social">
+	<h1 class="text-center">Get In Touch</h1>
+	<div class="d-grid gap-2 d-md-flex justify-content-center">
+		<div class="row align-items-center" id="social-row">
+		<div class="col-md-4 social-col">
+			<a href=""
+			><img
+				class="img-responsive rounded mx-auto d-block"
+				src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdKPa-UFAfvURpL_eZa03XBBTr49Uj9HYY10l1yt68oId7V2zp8BUTupXb0cc_jlcxbrY&usqp=CAU"
+				alt=""
+			/></a>
+		</div>
+<!--		<div class="col-md-4 social-col">-->
+<!--			<a href=""-->
+<!--			><img-->
+<!--				class="img-responsive rounded mx-auto d-block"-->
+<!--				src="images/icons8-instagram-64.png"-->
+<!--				alt=""-->
+<!--			/></a>-->
+<!--		</div>-->
+<!--		<div class="col-md-4 social-col">-->
+<!--			<a href=""-->
+<!--			><img-->
+<!--				class="img-responsive rounded mx-auto d-block"-->
+<!--				src="images/icons8-twitter-64.png"-->
+<!--				alt=""-->
+<!--			/></a>-->
+<!--		</div>-->
+		</div>
+	</div>
+	</section>
+
+	<!-- footer -->
+	<section id="footer">
+	<section id="banner">
+		<div class="container-fluid" id="banner-container">
+		<div class="row" id="banner-row">
+			<div class="col-md-4" id="footer-col1">
+			<h3>Legal Assist</h3>
+				
+<p>
+				  We believe that customers should
+				always get easy-to-use, best in the kind
+				and fast services.Legal Assist has achieved
+				standards which helps customer to
+				achieve satisfaction and realize
+				value for their hard earned money.
+			</p>
+
+			</div>
+			<div class="col-md-4" id="footer-col2">
+			<h3>Contact Us</h3>
+			
+				
+<p>Call Us- 1800-121-6532</p>
+
+				
+<p>Email Us- support@legalassist.com</p>
+
+			</div>
+			<div class="col-md-4" id="footer-col2">
+			<h3>Subscribe To Newsletter</h3>
+			<form>
+				<div class="mb-3">
+				<input
+					type="email"
+					placeholder="Enter Your Email"
+					class="form-control"
+					id="exampleInputEmail1"
+					aria-describedby="emailHelp"
+				/>
+				<div id="emailHelp"
+					class="form-text">
+					We'll never share your email with anyone else.
+				<div>
+				</div>
+				</div>
+				</div>
+				<button type="submit"
+						class="btn btn-primary">
+						Submit
+				</button>
+				<div>
+				
+						
+				
+				</div>
+				
+			</form>
+			</div>
+		</div>
+		</div>
+		
+	</section>
+
+
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script
+	src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+	integrity=
+"sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+	crossorigin="anonymous"
+	></script>
+</body>
+</html>

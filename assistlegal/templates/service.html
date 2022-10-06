@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .header {
+  padding: 80px; /* some padding */
+  text-align: center; /* center the text */
+  background: #1abc9c; /* green background */
+  color: white; /* white text color */
+}
+
+/* Increase the font size of the <h1> element */
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: #333; /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 70%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 20px; /* Some padding */
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.footer {
+  padding: 20px; /* Some padding */
+  text-align: center; /* Center text*/
+  background: #ddd; /* Grey background */
+}
+
+</style>
+<head>
+
+<title>Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+</style>
+<link
+href=
+"https://fontawesome.com/icons/facebook?s=brands"
+rel="stylesheet">
+{% load static %}
+</head>
+
+<body>
+
+<h1>Legal services</h1>
+<p><marquee>We provide online and offline legal aids</marquee> </p>
+
+<div class="header">
+    <h1>Our Services</h1>
+    <p> Family law  Civil law  Constitutional law</p>
+  </div>
+
+  <div class="navbar">
+    <a href="{% url 'home'%}">Home</a>
+    <a href="{% url 'loc'%}">Location</a>
+    <a href="https://main.sci.gov.in/daily-orders">Supreme Court Verdict</a>
+    <a href="https://www.google.co.in/" class="right">High Court Verdict</a>
+  </div>
+
+     </div>
+
+  <div class="row">
+    <div class="side"><h3>Family law</h3><br /><br />We are supportin you in Family-Divorce law. <br /> A complete guide on family laws in India. <br />
+    Deals with marriage, divorce, adoption,custody etc.<br /><br /><p><h3>Civil laws</h3></p><br /> Helping to file a civil case as per CPC
+    <br /><br /><p><h3>Constitutional Law</h3></p><br />We are handling Constitutional laws of USA China India and more.
+  </div>
+    <div class="main">Whether you’re a large international law firm or a solo attorney, you need a homepage that does a number of important things:
+
+        Communicates quickly and succinctly exactly what you do and the benefits you bring
+        Grabs attention with eye-catching images
+        Immediately establishes credibility
+        Provides an overview of services
+        Encourages your visitor to take the next action
+        Aids visitors in finding answers to the questions they have
+        Provides a simple and effective way to contact you
+        Is easy to read and uncluttered
+        Unless you can go through your homepage and nod in satisfaction that you have ticked each of the above components off, you’ll need to revisit it and make improvements. <p>Your ‘why’ is important.
+
+            The Our Firm page is the place where you can share a little of the story of why you and your firm are in business.
+            
+            It’s the place to add character and personality to your firm and to put the human face on it. Don’t forget that aw can be an intimidating profession for many people to deal with.
+            
+            When they check your Our Firm page, they are looking for information that will help them feel comfortable about taking things further. So don’t be tempted to make it merely another sales page.
+            
+            Have a call to action, yes, but the focus of the copy should be on you and your firm’s story; how you have built credibility over the years; and how you align with the needs of your target audience. 
+            Case studies are another excellent way to establish credibility on your law firm website. These demonstrate results – which is just what your target audience is interested in seeing when they come to your site.
+
+            Visitors want to know that they are in the best hands possible – and if you can show them a proven track record of success, this contributes greatly.</p><br />
+        </div>
+  </div>
+
+  <div class="footer">
+    <h5>We will help you to find a perfect solution</h5>
+    <a class="footer" href="https://www.facebook.com/target=_blank"> <i class="fa-brands fa-facebook"style="font-size:100px; margin-left: 490px; margin-top: -40px;></i></a> <br /><br />
+    <a href="#"></a>
+    <a href="#"></a>
+    
+  </div>
+
+</body>
+</html>
